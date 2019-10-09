@@ -1,0 +1,42 @@
+{
+  "name": "nxpimxrt",
+  "title": "NXP i.MX RT",
+  "description": "The i.MX RT Series is the industry’s first crossover MCU, offering the highest performance Arm® Cortex®-M core, real-time functionality, and MCU usability at an affordable price.",
+  "url": "https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/i.mx-rt-series:IMX-RT-SERIES",
+  "homepage": "http://platformio.org/platforms",
+  "license": "Apache-2.0",
+  "engines": {
+    "platformio": "<5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Seeed-Studio/platform-nxpimxrt.git"
+  },
+  "version": "3.8.0",
+  "packageRepositories": [
+    "https://dl.bintray.com/platformio/dl-packages/manifest.json",
+    "http://dl.platformio.org/packages/manifest.json"
+  ],
+  "frameworks": {
+    "arduino": {
+      "package": "framework-arduinoimxrt",
+      "script": "builder/frameworks/arduino.py"
+    }
+  },
+  "packages": {
+    "toolchain-gccarmnoneeabi": {
+      "type": "toolchain",
+      "version": "~1.70201.0"
+    },
+    "framework-arduinoimxrt": {
+      "type": "framework",
+      "optional": true,
+      "version": "~1.0.0"
+    },
+    "tool-bossac": {
+      "type": "uploader",
+      "optional": true,
+      "version": "~1.9.0"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "build": {
+    "core": "arduino",
+    "processor": "MIMXRT1052",
+    "cpu": "cortex-m7",
+    "fpu": "fpv5-d16",
+    "extra_flags": [
+      "-DARDUINO_ARCH_IMXRT",
+      "-DARDUINO_ARCH_MIX",
+      "-DCPU_MIMXRT1052DVL6B ",
+      "-DSEEED_ARCH_MIX",
+      "-DXIP_EXTERNAL_FLASH=1",
+      "-DXIP_BOOT_HEADER_ENABLE=1",
+      "-DUSB_STACK_BM",
+      "-DARDUINO_MAIN=1",
+      "-DARM_MATH_CM7"
+    ],
+    "f_cpu": "600000000L",
+    "hwids": [
+      [
+        "0x239A",
+        "0x802B"
+      ],
+      [
+        "0x239A",
+        "0x002B"
+      ]
+    ],
+    "ldscript": "flexspi_nor_arduino.ld",
+    "mcu": "mimxrt1052xxxxb",
+    "system": "imxrt",
+    "usb_product": "Seeed Arch Mix",
+    "variant": "arch_mix"
+  },
+  "debug": {
+    "jlink_device": "MIMXRT1052xxxxB"
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "name": "Seeed Arch Mix",
+  "upload": {
+    "disable_flushing": true,
+    "maximum_ram_size": 524288,
+    "maximum_size": 7747072,
+    "native_usb": true,
+    "offset_address": "0x10000",
+    "protocol": "sam-ba",
+    "protocols": [
+      "sam-ba"
+    ],
+    "require_upload_port": true,
+    "use_1200bps_touch": false,
+    "wait_for_upload_port": false
+  },
+  "url": "http://wiki.seeedstudio.com/Arch_Mix/",
+
+  "vendor": "SeeedStudio"
+}
