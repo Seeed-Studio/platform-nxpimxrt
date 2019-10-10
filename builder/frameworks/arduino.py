@@ -161,6 +161,7 @@ if BUILD_SYSTEM == "imxrt":
             join(SDK_DIR, "CMSIS", "Include"),
             join(SDK_DIR, "components", "serial_manager"),
             join(FRAMEWORK_DIR, "cores", BUILD_CORE, "USB"),
+            join(FRAMEWORK_DIR, "variants", board.get("build.variant"), "board"),
             join(USB_DIR, "include"),
             join(USB_DIR, "osa"),
             join(USB_DIR, "host"),
