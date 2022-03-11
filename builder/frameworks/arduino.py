@@ -42,7 +42,10 @@ DRIVER_DIR = join(SDK_DIR, "devices", board.get("build.processor"))
 
 
 #ld flags 
-LIBLINK = '-Wl,--start-group\"'+ ' \"-Wl,--whole-archive\" '+ LIB_DIR + '\libfsl_bsp.a ' + LIB_DIR + '\libfsl_usb_drivers.a ' + LIB_DIR + '\libfsl_xip_drivers.a '+'\"-Wl,--no-whole-archive\" '+'\"-Wl,--end-group'
+LIBLINK = '-Wl,--start-group\"'+ ' \"-Wl,--whole-archive\" '+ \
+    join(LIB_DIR , 'libfsl_bsp.a ') + \
+    join(LIB_DIR , 'libfsl_usb_drivers.a ') + \
+    join(LIB_DIR , 'libfsl_xip_drivers.a ') + ' \"-Wl,--no-whole-archive\" '+'\"-Wl,--end-group'
 
 # USB flags
 ARDUINO_USBDEFINES = [("ARDUINO", 10805)]
